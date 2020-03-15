@@ -1,0 +1,75 @@
+.best-offers-container {
+  background: var(--light-bg);
+  display: flex;
+  flex-direction: column;
+}
+.best-offers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2em;
+}
+
+.best-offers-container .title {
+  text-align: center;
+  margin: 2.5rem 0;
+}
+.best-offers-container .title h1 {
+  font-size: 2.5em;
+}
+.best-offers-container .title h4 {
+  font-weight: 100;
+  font-size: 1.2em;
+  color: #999999;
+}
+
+.best-offers {
+  margin: 0 6em;
+}
+.best-offers-container .tours-link {
+  padding: 1em 2em;
+  font-size: 0.9em;
+  background: var(--main-color);
+  color: white;
+  border: none;
+  outline: none;
+  margin: 2em auto;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 2rem;
+  text-decoration: none;
+}
+.best-offers-container .tours-link:hover {
+  background: #3daf95;
+}
+
+/* small devices */
+
+@media (max-width: 992px) {
+  .best-offers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2em;
+  }
+}
+
+@media (max-width: 600px) {
+  .best-offers {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 3em;
+  }
+}
+@media (max-width: 470px) {
+  .best-offers {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2em;
+  }
+}
+
+/* @media (max-width: 992px) {
+  .best-offers {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+  }
+} */

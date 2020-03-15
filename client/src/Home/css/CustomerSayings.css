@@ -1,0 +1,27 @@
+.customerSayings {
+  padding: 2em 4em;
+}
+.customerSayings .customer {
+  text-align: center;
+}
+.customerSayings .title {
+  margin: 2em 0;
+  text-align: center;
+}
+.customerSayings h1 {
+  font-size: 2.5em;
+}
+.customerSayings h4 {
+  font-weight: 100;
+  font-size: 1.2em;
+  color: #999999;
+}
+.customerSayings img {
+  margin: 1em auto;
+  border-radius: 50%;
+}
+
+/* Hide stop button */
+button[data-action='stop'] {
+  display: none;
+}
