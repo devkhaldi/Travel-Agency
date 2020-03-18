@@ -1,5 +1,5 @@
 import React from 'react'
-import video from '../video/video2.mp4'
+import video from '../video/video3.mp4'
 import '../Home/css/Hero.css'
 import { Link } from 'react-router-dom'
 

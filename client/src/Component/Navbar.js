@@ -11,7 +11,7 @@ const Navbar = () => {
         <AiOutlineMenu onClick={() => setIsOpened(!isOpened)} />
         <div className='logo-container'>
           <span>
-            <span style={{ color: '#48cfaf' }}>Menara</span>Travels
+            <span style={{ color: 'var(--main-color)' }}>Menara</span>Travels
           </span>
         </div>
         <div className='nav-items'>

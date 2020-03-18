@@ -1,0 +1,14 @@
+.tours-content {
+  display: flex;
+  padding: 4em 3em;
+  background-color: #fcfcfc !important;
+}
+.vector {
+  position: absolute;
+  z-index: 0;
+}
+@media (max-width: 992px) {
+  .tours-content {
+    flex-direction: column;
+  }
+}

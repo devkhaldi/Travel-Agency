@@ -27,7 +27,7 @@ const CustomerSayings = () => {
         }
       }
     })
-  })
+  }, [])
   return (
     <section className='customerSayings'>
       <div className='title'>
@@ -49,7 +49,7 @@ const CustomerSayings = () => {
   )
 }
 
-const customers = [
+let customers = [
   {
     id: 1,
     image: customer1,

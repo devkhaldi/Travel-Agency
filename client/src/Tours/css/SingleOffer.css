@@ -1,0 +1,66 @@
+.single-offer {
+  display: flex;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  border-radius: 0.1em;
+  margin-bottom: 1em;
+}
+.single-offer img {
+  max-width: 40%;
+  object-fit: cover;
+}
+.single-offer .container {
+  padding: 2em;
+  padding-bottom: 0.5em;
+}
+.single-offer .content {
+  display: flex;
+  flex-direction: column;
+}
+.single-offer .header {
+  display: flex;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.9em;
+}
+.single-offer .price {
+  margin-left: auto;
+}
+.single-offer .country-and-price {
+  display: flex;
+}
+.single-offer .country-and-price h3 {
+  font-size: 1.4em;
+}
+.single-offer .country-and-price .price {
+  margin-left: auto;
+  font-size: 1.5em;
+  color: var(--main-color);
+  letter-spacing: 0.1em;
+}
+.single-offer hr {
+  height: 1px;
+  border: none;
+  background-color: #eeeeee;
+  margin: 0.5em 0;
+}
+.single-offer .description {
+  display: flex;
+}
+.single-offer p {
+  font-size: 0.9em;
+  color: #888888;
+  width: 20em;
+}
+.single-offer a {
+  padding: 0.7em 0.8em;
+}
+
+@media (max-width: 992px) {
+  .single-offer {
+  }
+}
+
+@media (max-width: 600px) {
+}

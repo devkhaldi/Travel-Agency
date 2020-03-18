@@ -1,5 +1,5 @@
 .best-offers-container {
-  background: var(--light-bg);
+  background: white;
   display: flex;
   flex-direction: column;
 }
@@ -8,7 +8,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2em;
 }
-
 .best-offers-container .title {
   text-align: center;
   margin: 2.5rem 0;
