@@ -12,11 +12,12 @@
 }
 .caption-top {
   font-weight: bold;
-  font-size: 1em;
-  /* margin: 0.5em 0; */
+  font-size: 1.2em;
+  margin: 0.2em 0;
+  letter-spacing: 0.05em;
 }
 .caption-bottom {
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: #888888;
 }
 .caption-top .price,

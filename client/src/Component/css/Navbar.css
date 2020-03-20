@@ -11,20 +11,19 @@
 
 /* style navbar on scroll */
 .navbar-scrolling {
-  background: rgba(255, 255, 255, 0.99);
-  /* box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.05); */
-  -webkit-box-shadow: 0px 9px 228px -20px rgba(0, 0, 0, 0.29);
-  -moz-box-shadow: 0px 9px 228px -20px rgba(0, 0, 0, 0.29);
-  box-shadow: 0px 9px 228px -20px rgba(0, 0, 0, 0.29);
+  background: var(--main-color);
+  /* box-shadow: var(--shadow); */
+  box-shadow: 0px 0px 2px #555555;
 }
-.navbar-scrolling .nav-items a,
+/* .navbar-scrolling .nav-items a,
 .navbar-scrolling .logo-container {
   color: #000;
-}
+} */
 
 /* Logo */
 .logo-container {
   font-family: 'Dancing Script', cursive;
+  text-transform: uppercase;
   display: flex;
   margin: auto 2em;
   color: white;
@@ -40,6 +39,9 @@
 }
 .nav-items a {
   padding: 1.4em 1em;
+
+  font-weight: 300;
+  text-transform: uppercase;
   text-decoration: none;
   color: white;
 }
@@ -50,10 +52,10 @@
   transition: all 0.5s;
   display: block;
   height: 4px;
-  background: var(--main-color);
+  background: white;
 }
 .nav-items a.active::after {
-  background: var(--main-color);
+  background: white;
   width: 100%;
 }
 
@@ -69,9 +71,7 @@
   font-size: 2em;
   cursor: pointer;
 }
-.navbar-scrolling svg {
-  color: #000;
-}
+
 /* Side navbar for mobile phones */
 .side-nav {
   position: fixed;

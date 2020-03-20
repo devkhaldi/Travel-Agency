@@ -10,9 +10,7 @@ const Navbar = () => {
       <div className='navbar animated medium'>
         <AiOutlineMenu onClick={() => setIsOpened(!isOpened)} />
         <div className='logo-container'>
-          <span>
-            <span style={{ color: 'var(--main-color)' }}>Menara</span>Travels
-          </span>
+          <span>Menara Travels</span>
         </div>
         <div className='nav-items'>
           <NavLink exact to='/'>

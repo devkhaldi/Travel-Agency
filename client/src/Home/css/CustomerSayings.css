@@ -4,6 +4,12 @@
 .customerSayings .customer {
   text-align: center;
 }
+.customerSayings .customer p {
+  margin-top: 1em;
+  line-height: 1.4em;
+  color: #888888;
+}
+
 .customerSayings .title {
   margin: 2em 0;
   text-align: center;
@@ -13,7 +19,7 @@
 }
 .customerSayings h4 {
   font-weight: 100;
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: #999999;
 }
 .customerSayings img {

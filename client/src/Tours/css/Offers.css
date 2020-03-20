@@ -39,7 +39,7 @@
 
 .grid-view:hover,
 .list-view:hover {
-  background: var(--main-color);
+  background: #eeeeee;
 }
 
 .view {

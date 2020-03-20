@@ -1,6 +1,5 @@
 .tours-search {
-  margin: 0 2em;
-  max-width: 20em;
+  margin-right: 1em;
   min-width: 20em;
 }
 .tours-search form {
@@ -73,7 +72,6 @@
 }
 
 /* small devices */
-
 @media (max-width: 992px) {
   .tours-search {
     width: 100%;

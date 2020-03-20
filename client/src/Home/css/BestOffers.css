@@ -1,5 +1,5 @@
 .best-offers-container {
-  background: white;
+  background: #eee;
   display: flex;
   flex-direction: column;
 }

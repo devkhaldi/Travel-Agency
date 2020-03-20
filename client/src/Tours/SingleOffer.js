@@ -9,7 +9,6 @@ const SingleOffer = ({ offer }) => {
   return (
     <section className='single-offer'>
       <img src={offer.image} alt='offer image' />
-
       <div className='container'>
         <div className='content'>
           <div className='header'>
@@ -24,9 +23,11 @@ const SingleOffer = ({ offer }) => {
           <hr />
           <div className='description'>
             <p>{offer.description}</p>
-            <Link to={`/tours/${offer.id}`} className='button'>
-              Show More
-            </Link>
+            <div className='link-container'>
+              <Link to={`/tours/${offer.id}`} className='button'>
+                SHOW
+              </Link>
+            </div>
           </div>
         </div>
       </div>
