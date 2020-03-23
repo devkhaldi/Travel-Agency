@@ -1,0 +1,75 @@
+.contact-page {
+  padding: 2em;
+  background: #eeeeee;
+}
+.contact-page .contact-container {
+  display: flex;
+}
+.contact-page .contact-column {
+  padding: 4em;
+  flex: 1;
+}
+.contact-page p {
+  color: #888888;
+  font-size: 0.9em;
+  margin-top: 2.5em;
+}
+.contact-page .contact-items {
+  color: #888888;
+  font-size: 0.9em;
+  margin-top: 2.5em;
+}
+.contact-page .contact-items {
+  display: flex;
+  flex-direction: column;
+}
+.contact-page .contact-items .row {
+  display: flex;
+  margin-bottom: 1.8em;
+}
+.contact-page .contact-items .icon-container {
+  margin-right: 1em;
+}
+.contact-items span {
+  color: #888888;
+}
+.contact-page form {
+  margin-top: 2.5em;
+  padding: 0 1em;
+}
+.contact-page form .form-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.contact-page form input {
+  border-radius: 0.75em;
+  border: solid 1px #dddddd;
+  outline: none;
+  height: 2.2em;
+  font-size: 1em;
+  padding: 0 1em;
+  width: 100%;
+}
+.contact-page form textarea {
+  font-family: 'Roboto', sans-serif;
+  border-radius: 0.75em;
+  border: solid 1px #dddddd;
+  outline: none;
+  resize: vertical;
+  min-height: 8em;
+  height: 8em;
+  font-size: 1em;
+  padding: 0.8em 1em;
+  width: 100%;
+}
+.contact-page form input[type='submit'] {
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  .contact-page .contact-container {
+    flex-direction: column;
+  }
+}

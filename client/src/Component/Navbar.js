@@ -25,8 +25,8 @@ const Navbar = () => {
           <NavLink exact to='/flights'>
             Flights
           </NavLink>
-          <NavLink exact to='/galery'>
-            Galery
+          <NavLink exact to='/gallery'>
+            Gallery
           </NavLink>
           <NavLink exact to='/contact'>
             Contact
@@ -47,8 +47,8 @@ const Navbar = () => {
           <NavLink exact to='/flights'>
             Flights
           </NavLink>
-          <NavLink exact to='/galery'>
-            Galery
+          <NavLink exact to='/gallery'>
+            Gallery
           </NavLink>
           <NavLink exact to='/contact'>
             Contact
