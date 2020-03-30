@@ -10,11 +10,11 @@ import 'animate.css'
 window.onscroll = () => {
   let classList = document.querySelector('.navbar').classList
   if (window.scrollY == 0) {
-    classList.remove('navbar-scrolling', 'slideInDown')
+    classList.remove('navbar-scrolling')
     // classList.add('slideInRight')
   } else {
     // classList.remove('slideInRight')
-    classList.add('navbar-scrolling', 'slideInDown')
+    classList.add('navbar-scrolling')
   }
 }
 

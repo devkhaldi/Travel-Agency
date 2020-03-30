@@ -1,14 +1,16 @@
 .whyMenaraTravels {
+  position: relative;
   padding: 3em 2em;
   background: url('https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-attachment: fixed;
   background-size: cover;
 }
-.title-container {
+
+.whyMenaraTravels .title-container {
   text-align: center;
   margin: 2em 0;
 }
-.title-container h1 {
+.whyMenaraTravels .title-container h1 {
   font-size: 2.5em;
   color: #fff;
   text-shadow: 0px 1px #000;
@@ -29,7 +31,8 @@
   padding-right: 1.5rem;
 }
 .whyMenaraTravels .icon {
-  background: var(--main-color);
+  background: var(--blue-light);
+  background: var(--blue-gradient);
   height: 3em;
   width: 3em;
   border-radius: 50%;

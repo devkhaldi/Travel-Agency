@@ -4,6 +4,7 @@ import Error from './Pages/Error'
 import Tours from './Tours/Tours'
 import Gallery from './Gallery/Gallery'
 import Contact from './Contact/Contact'
+import SingleTour from './SingleTour/SingleTour'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './App.css'
 
@@ -15,6 +16,7 @@ function App() {
         <Route exact path='/tours' component={Tours} />
         <Route exact path='/gallery' component={Gallery} />
         <Route exact path='/contact' component={Contact} />
+        <Route exact path='/tours/:id' component={SingleTour} />
         <Route component={Error} />
       </Switch>
     </BrowserRouter>

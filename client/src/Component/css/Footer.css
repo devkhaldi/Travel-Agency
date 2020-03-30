@@ -1,8 +1,7 @@
 footer {
   padding: 4em 4em 1em 4em;
-  color: #888888;
-  background: #fff;
-  border-top: 1px solid #dddddd;
+  color: #555555;
+  background: var(--light-bg);
 }
 footer .logo {
   font-family: 'Dancing Script', cursive;
@@ -57,7 +56,8 @@ footer .social-icons svg:hover {
 footer button {
   padding: 0.5em 1.5em;
   font-size: 1em;
-  background: var(--main-color);
+  background: var(--blue-light);
+  background: var(--blue-gradient);
   color: white;
   border: none;
   outline: none;

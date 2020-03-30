@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { AiOutlineMenu } from 'react-icons/ai'
 import './css/Navbar.css'
+import logo from '../img/logo.png'
 
 const Navbar = () => {
   const [isOpened, setIsOpened] = useState(true)
@@ -10,7 +11,7 @@ const Navbar = () => {
       <div className='navbar animated medium'>
         <AiOutlineMenu onClick={() => setIsOpened(!isOpened)} />
         <div className='logo-container'>
-          <span>Menara Travels</span>
+          <img src={logo} alt='logo' />
         </div>
         <div className='nav-items'>
           <NavLink exact to='/'>

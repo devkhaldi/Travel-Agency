@@ -1,5 +1,5 @@
 import React from 'react'
-import video from '../video/video3.mp4'
+import video from '../video/Video5.m4v'
 import '../Home/css/Hero.css'
 import { Link } from 'react-router-dom'
 
@@ -17,7 +17,6 @@ const Hero = () => {
             Travel to the any corner of the world, without going around in circles.
           </h3>
         </div>
-
         <Link to='/tours'>Explore Tours</Link>
       </div>
     </section>

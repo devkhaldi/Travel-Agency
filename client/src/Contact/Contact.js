@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../Component/Navbar'
 import Footer from '../Component/Footer'
 import Hero from '../Component/Hero'
@@ -8,14 +8,23 @@ import phone from '../img/Contact/phone.png'
 import mobile from '../img/Contact/mobile.png'
 import email from '../img/Contact/email.png'
 import link from '../img/Contact/link.png'
-
 import './css/Contact.css'
 
 const Contact = () => {
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }, [])
   return (
     <React.Fragment>
       <Navbar />
-      <Hero bgImage={bgImage} title='Contact Us' subtitle='Let`s keep in touch!' />
+      <Hero bgImage={bgImage}>
+        <h1 className='title'>Contact Us</h1>
+        <h3 className='subtitle'>Let`s keep in touch!</h3>
+      </Hero>
       <div className='contact-page'>
         <div className='contact-container'>
           <div className='contact-column'>

@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
 
 :root {
   /* --main-color: #48cfaf; */
-  --main-color: #00848c;
-  --light-bg: #e9f1f1;
-  --shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  --main-color: #09aeed;
+  --dark-blue: #0168b4;
+  --light-blue: #09aeed;
+  --dark-orange: #ed2a24;
+  --light-orange: #f8ca10;
+  --blue-gradient: linear-gradient(90deg, var(--dark-blue) 0%, var(--light-blue) 100%);
+  --orange-gradient: linear-gradient(90deg, var(--dark-orange) 0%, var(--light-orange) 100%);
+  --light-bg: #f2f5f7;
+  --shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
 }
 * {
   margin: 0;
@@ -35,18 +40,24 @@ body {
   overflow-x: hidden;
 }
 .button {
+  position: relative;
   padding: 1em 2em;
   font-size: 0.9em;
-  background: var(--main-color);
+  background: var(--light-blue);
+  background: var(--blue-gradient);
   color: white;
   border: none;
   outline: none;
   margin: 2em auto;
+  transition: all 0.5s;
   cursor: pointer;
-  transition: 0.5s;
   border-radius: 2em;
   text-decoration: none;
 }
-.button:hover {
-  background: #3daf95;
+.heroCurve {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 101%;
+  z-index: 3;
 }

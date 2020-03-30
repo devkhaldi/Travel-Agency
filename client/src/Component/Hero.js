@@ -1,7 +1,8 @@
 import React from 'react'
 import './css/Hero.css'
+import navShape from '../img/nav-shape.svg'
 
-const Hero = ({ title, subtitle, bgImage }) => {
+const Hero = ({ children, bgImage }) => {
   return (
     <section
       className='mini-hero'
@@ -10,10 +11,7 @@ const Hero = ({ title, subtitle, bgImage }) => {
         backgroundSize: 'cover',
         backgroundPosition: 'bottom'
       }}>
-      <div className='text-container'>
-        <h1 className='title'>{title}</h1>
-        <h3 className='subtitle'>{subtitle}</h3>
-      </div>
+      <div className='text-container'>{children}</div>
     </section>
   )
 }

@@ -1,18 +1,19 @@
 /* Hero section */
 .hero {
+  position: relative;
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   display: flex;
   align-items: center;
-  z-index: 6;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
+
 video {
   position: absolute;
   top: 0;
   left: 0;
   object-fit: cover;
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   pointer-events: none;
 }
@@ -21,10 +22,10 @@ video {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   background: black;
-  opacity: 0.2;
+  opacity: 0.3;
   z-index: 3;
 }
 
@@ -59,7 +60,8 @@ video {
 .hero-content a {
   padding: 1em 2em;
   font-size: 1em;
-  background: var(--main-color);
+  background: var(--blue-light);
+  background: var(--blue-gradient);
   color: white;
   border: none;
   outline: none;
@@ -69,11 +71,7 @@ video {
   border-radius: 2rem;
   text-decoration: none;
 }
-.hero-content a:hover {
-  background: #3daf95;
-}
 
-/* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
   .welcome-text .title {
     font-size: 1.2em;
@@ -86,7 +84,6 @@ video {
   }
 }
 
-/* Large devices (desktops, 992px and up) */
 @media (max-width: 992px) {
   .welcome-text .title {
     font-size: 2.2em;
@@ -97,8 +94,4 @@ video {
   .hero-content {
     width: 100%;
   }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
 }

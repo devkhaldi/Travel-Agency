@@ -16,7 +16,10 @@ const Gallery = () => {
   return (
     <React.Fragment>
       <Navbar />
-      <Hero bgImage={cover} title='Gallery' subtitle='Photos of Our Destinations' />
+      <Hero bgImage={cover}>
+        <h1 className='title'>Gallery</h1>
+        <h3 className='subtitle'>Photos of Our Destinations</h3>
+      </Hero>
       <GalleryCompo />
       <Footer />
     </React.Fragment>

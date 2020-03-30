@@ -7,26 +7,31 @@ import icon4 from '../img/WhyMenaraTravels/4.png'
 import icon5 from '../img/WhyMenaraTravels/5.png'
 import icon6 from '../img/WhyMenaraTravels/6.png'
 import bgImage from '../img/whyMenaraTravels.jpg'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 const WhyMenaraTravels = () => {
   return (
     <section className='whyMenaraTravels'>
       <div className='title-container'>
-        <h1>Why Menara Travels</h1>
+        <ScrollAnimation animateOnce={true} delay={500} animateIn='slideInLeft'>
+          <h1>Why Menara Travels</h1>
+        </ScrollAnimation>
       </div>
       <div className='cards-container'>
         {cardsContent.map(ct => (
-          <div key={ct.id} className='card'>
-            <div className='icon-container'>
-              <div className='icon'>
-                <img src={ct.icon} alt='icon' />
+          <ScrollAnimation animateOnce={true} animateIn='slideInRight'>
+            <div key={ct.id} className='card'>
+              <div className='icon-container'>
+                <div className='icon'>
+                  <img src={ct.icon} alt='icon' />
+                </div>
+              </div>
+              <div className='text-container'>
+                <h3>{ct.title}</h3>
+                <p>{ct.content}</p>
               </div>
             </div>
-            <div className='text-container'>
-              <h3>{ct.title}</h3>
-              <p>{ct.content}</p>
-            </div>
-          </div>
+          </ScrollAnimation>
         ))}
       </div>
     </section>

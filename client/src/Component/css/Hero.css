@@ -1,5 +1,5 @@
 .mini-hero {
-  min-height: 50vh;
+  min-height: 60vh;
   width: 100%;
   color: white;
   position: relative;
@@ -14,11 +14,12 @@
 }
 .mini-hero h1 {
   font-size: 3em;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.5em;
   text-shadow: 0 1px black;
 }
 .mini-hero h3 {
   font-size: 1.8em;
   font-weight: 100;
   text-shadow: 0 1px black;
+  margin-bottom: 1.5em;
 }

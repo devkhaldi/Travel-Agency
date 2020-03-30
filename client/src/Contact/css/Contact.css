@@ -1,6 +1,6 @@
 .contact-page {
   padding: 2em;
-  background: #eeeeee;
+  background: #ffffff;
 }
 .contact-page .contact-container {
   display: flex;
@@ -51,11 +51,12 @@
   font-size: 1em;
   padding: 0 1em;
   width: 100%;
+  transition: all 0.5s;
 }
 .contact-page form textarea {
   font-family: 'Roboto', sans-serif;
-  border-radius: 0.75em;
-  border: solid 1px #dddddd;
+  border-radius: 0.1em;
+  border: solid 1px #eeeeee;
   outline: none;
   resize: vertical;
   min-height: 8em;
@@ -63,6 +64,10 @@
   font-size: 1em;
   padding: 0.8em 1em;
   width: 100%;
+}
+.contact-page form input:focus,
+.contact-page form textarea:focus {
+  box-shadow: 0px 1px 2px #bbbbbb;
 }
 .contact-page form input[type='submit'] {
   margin: 0;

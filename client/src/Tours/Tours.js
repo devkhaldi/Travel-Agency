@@ -19,7 +19,10 @@ const Tours = () => {
   return (
     <React.Fragment>
       <Navbar />
-      <Hero subtitle='150 tours found' bgImage={bg} title='All Tours For You' />
+      <Hero bgImage={bg}>
+        <h1 className='title'>150 tours found</h1>
+        <h3 className='subtitle'>All Tours For You</h3>
+      </Hero>
       <div
         style={{
           background: `url(${vector})`,
