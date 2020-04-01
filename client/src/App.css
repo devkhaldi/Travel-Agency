@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap');
 
 :root {
   /* --main-color: #48cfaf; */
@@ -35,6 +36,17 @@
   background: #cccccc;
   border-radius: 10px;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* font-family: 'Raleway', sans-serif !important; */
+  font-weight: 100 !important;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;

@@ -1,10 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 
-const showMessage = () => {
-  console.log('test')
-}
-
 const CheckOut = ({ handleModalOpen, handleModalClose }) => {
   return ReactDom.createPortal(
     <section onClick={() => handleModalClose()} className='checkout-modal'>
