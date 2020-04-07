@@ -4,7 +4,11 @@ const app = express()
 require('dotenv').config()
 
 mongoose
-  .connect(process.env.MONGO_DB, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.MONGO_DB, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: true,
+  })
   .then(() => console.log('Connected to MongoDB'))
   .catch(() => console.log('Failed to connect to MongoDB'))
 
@@ -15,7 +19,7 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use('/api/tours', require('./routes/tours'))
 app.use('/api/customerSayings', require('./routes/tours'))
-app.use('/api/galleryImages', require('./routes/galleryImages'))
+app.use('/api/images', require('./routes/galleryImages'))
 app.use('/api/messages', require('./routes/messages'))
 
 app.use((req, res) => res.status(404).json({ message: 'Not found' }))

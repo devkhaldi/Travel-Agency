@@ -6,11 +6,11 @@ const multer = require('multer')
 // Handle file uploads
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'uploads')
+    cb(null, './uploads/')
   },
   filename: (req, file, cb) => {
     cb(null, Date.now() + '_' + file.originalname)
-  }
+  },
 })
 // FILE FILTER
 const fileFilter = (req, file, cb) => {
@@ -35,37 +35,44 @@ Router.get('/', async (req, res) => {
   }
 })
 
-// GET SINGLE TOUR
-// Route.get('/:id', async (req, res) => {
-//   const tour = await Tour.find({_id : req.params.id})
-// })
+//GET SINGLE TOUR
+Router.get('/:id', async (req, res) => {
+  const tour = await Tour.find({ _id: req.params.id })
+})
 
 // STORE TOUR
-Router.post('/', upload.single('mainImage'), async (req, res, next) => {
+Router.post('/', upload.array('images', 10), async (req, res, next) => {
+  let images = []
+  req.files.map((file) => {
+    images.push(file.path)
+  })
   const tour = new Tour({
+    _id: mongoose.Types.ObjectId(),
     country: req.body.country,
     price: req.body.price,
     duration: req.body.duration,
     cities: req.body.cities,
-    // mainImage: req.file.path,
+    mainImage: req.files[req.body.mainImage].path,
     description: req.body.description,
     tourTitle: req.body.tourTitle,
     tourSubtitle: req.body.tourSubtitle,
     dateStart: req.body.dateStart,
     dateEnd: req.body.dateEnd,
     numberPlaces: req.body.numberPlaces,
-    placesAvaible: req.body.placesAvaible,
-    program: req.body.program
-    // images: req.files
+    placesAvailable: req.body.placesAvailable,
+    program: req.body.program,
+    images,
   })
-
-  console.log(tour)
-  // try {
-  //   const savedTour = await tour.save()
-  //   res.json({ message: 'Tour created', tour: savedTour })
-  // } catch (error) {
-  //   res.status(500).json({ error })
-  // }
+  try {
+    const savedTour = await tour.save()
+    res.json({ message: 'Tour created', tour: savedTour })
+  } catch (error) {
+    res.status(500).json({ error })
+  }
 })
+
+// UPDATE TOUR
+
+// DELETE TOUR
 
 module.exports = Router

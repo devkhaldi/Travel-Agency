@@ -11,7 +11,7 @@
   --blue-gradient: linear-gradient(90deg, var(--dark-blue) 0%, var(--light-blue) 100%);
   --orange-gradient: linear-gradient(90deg, var(--dark-orange) 0%, var(--light-orange) 100%);
   --light-bg: #f2f5f7;
-  --shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+  --shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
 }
 * {
   margin: 0;
