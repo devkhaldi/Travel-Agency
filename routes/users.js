@@ -1,2 +1,4 @@
 const Router = require('express').Router()
-Router.post('/login', (req, res) => res.json({ message: 'login user' }))
+const jwt = require('jsonwebtoken')
+
+Router.post('/login', (req, res) => {})

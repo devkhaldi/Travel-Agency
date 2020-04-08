@@ -2,6 +2,7 @@ const Router = require('express').Router()
 const multer = require('multer')
 const mongoose = require('mongoose')
 const GalleryImage = require('../modules/GalleryImage')
+const fs = require('fs')
 
 // Handle file uploads
 const storage = multer.diskStorage({
@@ -49,12 +50,17 @@ Router.post('/', upload.single('image'), async (req, res) => {
 })
 
 // UPDATE A GALLERY IMAGE
-Router.put('/:id', (req, res) => {
+Router.put('/:id', upload.single('image'), (req, res) => {
   try {
-    GalleryImage.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, message) => {
-      if (error) return res.status(500).json({ error })
-      res.json({ message })
-    })
+    GalleryImage.findByIdAndUpdate(
+      req.params.id,
+      { ...req.body, ...req.file.path },
+      { new: true },
+      (error, message) => {
+        if (error) return res.status(500).json({ error })
+        res.json({ message })
+      }
+    )
   } catch (error) {
     res.status(500).json({ error })
   }

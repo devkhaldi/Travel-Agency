@@ -2,7 +2,7 @@ const Router = require('express').Router()
 const mongoose = require('mongoose')
 const CustomerSaying = require('../modules/CustomerSaying')
 
-// Handle file uploads
+// Handel file upload
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, './uploads/customerSayings/')
@@ -47,17 +47,21 @@ Router.post('/', upload.single('image'), async (req, res) => {
   }
 })
 
-Router.put('/:id', (req, res) => {
+Router.put('/:id', upload.single('image'), (req, res) => {
   try {
-    CustomerSaying.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, message) => {
-      if (error) return res.status(500).json({ error })
-      res.json({ customerSaying: message })
-    })
+    CustomerSaying.findByIdAndUpdate(
+      req.params.id,
+      { ...req.body, ...req.file.path },
+      { new: true },
+      (error, message) => {
+        if (error) return res.status(500).json({ error })
+        res.json({ customerSaying: message })
+      }
+    )
   } catch (error) {
     res.status(500).json({ error })
   }
 })
-
 Router.delete('/:id', (req, res) => {
   CustomerSaying.findByIdAndRemove(req.params.id, (error, result) => {
     if (!result) return res.status(404).json({ message: 'not found' })

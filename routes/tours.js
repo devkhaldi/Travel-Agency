@@ -37,7 +37,13 @@ Router.get('/', async (req, res) => {
 
 //GET SINGLE TOUR
 Router.get('/:id', async (req, res) => {
-  const tour = await Tour.find({ _id: req.params.id })
+  try {
+    // const tour = await Tour.find({ _id: req.params.id })
+    const tour = await Tour.findById(req.params.id)
+    res.json({ tour })
+  } catch (error) {
+    res.status(500).json({ error })
+  }
 })
 
 // STORE TOUR
@@ -73,6 +79,28 @@ Router.post('/', upload.array('images', 10), async (req, res, next) => {
 
 // UPDATE TOUR
 
+Router.put('/:id', (req, res) => {
+  try {
+    Tour.findByIdAndUpdate(
+      req.params.id,
+      { ...req.body, ...req.file.path },
+      { new: true },
+      (error, message) => {
+        if (error) return res.status(500).json({ error })
+        res.json({ message })
+      }
+    )
+  } catch (error) {
+    res.status(500).json({ error })
+  }
+})
+
 // DELETE TOUR
+Router.delete('/:id', (req, res) => {
+  Tour.findByIdAndRemove(req.params.id, (error, result) => {
+    if (!result) return res.status(404).json({ message: 'not found' })
+    res.json({ message: 'deleted' })
+  })
+})
 
 module.exports = Router
