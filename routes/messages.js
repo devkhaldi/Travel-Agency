@@ -25,7 +25,6 @@ Router.post('/', async (req, res) => {
     res.status(500).json({ error })
   }
 })
-
 Router.put('/:id', (req, res) => {
   try {
     Message.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, message) => {

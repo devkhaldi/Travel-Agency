@@ -2,6 +2,7 @@ const Router = require('express').Router()
 const mongoose = require('mongoose')
 const Tour = require('../modules/Tour')
 const multer = require('multer')
+const http = require('http')
 
 // Handle file uploads
 const storage = multer.diskStorage({
@@ -12,7 +13,7 @@ const storage = multer.diskStorage({
     cb(null, Date.now() + '_' + file.originalname)
   },
 })
-// FILE FILTER
+// File Filter
 const fileFilter = (req, file, cb) => {
   if (
     file.mimetype === 'image/jpeg' ||
@@ -25,20 +26,56 @@ const fileFilter = (req, file, cb) => {
 
 const upload = multer({ storage })
 
-// GET ALL TOURS
+// Get all tours
 Router.get('/', async (req, res) => {
+  // Pagination
+  const page = req.query.page || 1
+  const limit = req.query.limit || 10
+  const startIndex = (page - 1) * limit
+  const endIndex = page * limit
+
   try {
-    const tours = await Tour.find()
+    if (destination !== '')
+      const tours = await Tour.find()
+        .skip(startIndex)
+        .limit(endIndex)
     res.json({ tours })
   } catch (error) {
     res.status(500).json({ error })
   }
 })
 
-//GET SINGLE TOUR
+// Filter tours
+
+Router.post('/filter', (req, res) => {
+  const min_price = req.body.min_price || 1000
+  const max_price = req.body.max_price || 10000
+  const destination = req.body.destination || ''
+  const categories = req.body.categories || ['sea', 'romantic', 'honeymoon', 'country', 'montain']
+  // Pagination
+  const page = req.query.page || 1
+  const limit = req.query.limit || 10
+
+  const startIndex = (page - 1) * limit
+  const endIndex = page * limit
+  try {
+    if (destination !== '')
+      const tours = await Tour.find({
+        price: { $min: min_price, $max: max_price },
+        category: { $all: categories },
+        destination,
+      })
+        .skip(startIndex)
+        .limit(endIndex)
+    res.json({ tours })
+  } catch (error) {
+    res.status(500).json({ error })
+  }
+})
+
+//Get single tour
 Router.get('/:id', async (req, res) => {
   try {
-    // const tour = await Tour.find({ _id: req.params.id })
     const tour = await Tour.findById(req.params.id)
     res.json({ tour })
   } catch (error) {
@@ -46,7 +83,7 @@ Router.get('/:id', async (req, res) => {
   }
 })
 
-// STORE TOUR
+// Store tour
 Router.post('/', upload.array('images', 10), async (req, res, next) => {
   let images = []
   req.files.map((file) => {
@@ -77,25 +114,20 @@ Router.post('/', upload.array('images', 10), async (req, res, next) => {
   }
 })
 
-// UPDATE TOUR
+// Update Tour
 
 Router.put('/:id', (req, res) => {
   try {
-    Tour.findByIdAndUpdate(
-      req.params.id,
-      { ...req.body, ...req.file.path },
-      { new: true },
-      (error, message) => {
-        if (error) return res.status(500).json({ error })
-        res.json({ message })
-      }
-    )
+    Tour.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, message) => {
+      if (error) return res.status(500).json({ error })
+      res.json({ message })
+    })
   } catch (error) {
-    res.status(500).json({ error })
+    res.status(500).json({ message: 'something wrong!' })
   }
 })
 
-// DELETE TOUR
+// Delete Tour
 Router.delete('/:id', (req, res) => {
   Tour.findByIdAndRemove(req.params.id, (error, result) => {
     if (!result) return res.status(404).json({ message: 'not found' })

@@ -18,9 +18,9 @@ import './css/GalleryCompo.css'
 const GalleryCompo = () => {
   return (
     <div className='gallery'>
-      {galleryItems.map(item => (
+      {galleryItems.map((item) => (
         <div className='column'>
-          {item.map(columnItem => (
+          {item.map((columnItem) => (
             <div className='img-container'>
               <img src={columnItem.image} alt='gallery item' />
               <div className='img-overlay'>
@@ -39,26 +39,26 @@ const galleryItems = [
     { image: img1, destination: 'Bankok, Tailand' },
     { image: img2, destination: 'Barcelona, Spain' },
     { image: img3, destination: 'Bled, Slovinia' },
-    { image: img4, destination: 'Burgenland, Austria' }
+    { image: img4, destination: 'Burgenland, Austria' },
   ],
   [
     { image: img5, destination: 'Himalayas, Nipal' },
     { image: img6, destination: 'Istanbol, Turkey' },
     { image: img7, destination: 'London, England' },
-    { image: img8, destination: 'Longs Peak, USA' }
+    { image: img8, destination: 'Longs Peak, USA' },
   ],
   [
     { image: img9, destination: 'Port Antonio, Jamaika' },
     { image: img10, destination: 'St Jones, Antigua' },
     { image: img11, destination: 'Swiss Alps, Switzerland' },
-    { image: img12, destination: 'Valletta, Malta' }
+    { image: img12, destination: 'Valletta, Malta' },
   ],
   [
     { image: img3, destination: 'Bled, Slovinia' },
     { image: img4, destination: 'Burgenland, Austria' },
     { image: img1, destination: 'Bankok, Tailand' },
-    { image: img2, destination: 'Barcelona, Spain' }
-  ]
+    { image: img2, destination: 'Barcelona, Spain' },
+  ],
 ]
 
 export default GalleryCompo

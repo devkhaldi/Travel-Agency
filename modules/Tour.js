@@ -10,8 +10,8 @@ const programSchema = new mongoose.Schema({
 
 const TourSchema = new mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
-  country: { type: String, reqired: true, minLenmaxlength: 3, maxlength: 100 },
-  price: { type: Number, reqired: true, min: 100 },
+  country: { type: String, required: true, minLenmaxlength: 3, maxlength: 100 },
+  price: { type: Number, required: true, min: 100 },
   duration: { type: Number, required: true },
   cities: [String],
   mainImage: { type: String },
@@ -19,6 +19,7 @@ const TourSchema = new mongoose.Schema({
   tourTitle: { type: String, required: true },
   tourSubtitle: { type: String, required: true },
   dateStart: { type: String, required: true },
+  category: { type: String, required: true },
   dateEnd: { type: String, required: true },
   numberPlaces: { type: String, required: true },
   placesAvailable: { type: Number, required: true, min: 0 },
