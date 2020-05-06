@@ -11,8 +11,8 @@
 
 /* style navbar on scroll */
 .navbar-scrolling {
-  background: rgba(0, 0, 0, 0.75);
-  /* box-shadow: var(--shadow); */
+  background: #fcfcfc;
+  box-shadow: var(--shadow);
 }
 .navbar-scrolling .logo-container img {
   height: 3em;
@@ -21,9 +21,9 @@
 .navbar-scrolling .nav-items {
   margin-top: 0;
 }
-/* .navbar-scrolling .nav-items a {
+.navbar-scrolling .nav-items a {
   color: #888888;
-} */
+}
 
 /* Logo */
 .logo-container {

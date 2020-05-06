@@ -9,7 +9,7 @@ const Hero = ({ children, bgImage }) => {
       style={{
         background: `url(${bgImage})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'bottom'
+        backgroundPosition: 'bottom',
       }}>
       <div className='text-container'>{children}</div>
     </section>

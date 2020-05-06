@@ -6,12 +6,8 @@ const http = require('http')
 
 // Handle file uploads
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, './uploads/')
-  },
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + '_' + file.originalname)
-  },
+  destination: (req, file, cb) => cb(null, './uploads/'),
+  filename: (req, file, cb) => cb(null, Date.now() + '_' + file.originalname)
 })
 // File Filter
 const fileFilter = (req, file, cb) => {
@@ -19,9 +15,8 @@ const fileFilter = (req, file, cb) => {
     file.mimetype === 'image/jpeg' ||
     file.mimetype === 'image/jpg' ||
     file.mimetype === 'image/png'
-  ) {
-    cb(null, true)
-  } else cb(null, false)
+  ) cb(null, true)
+   else cb(null, false)
 }
 
 const upload = multer({ storage })
@@ -33,20 +28,15 @@ Router.get('/', async (req, res) => {
   const limit = req.query.limit || 10
   const startIndex = (page - 1) * limit
   const endIndex = page * limit
-
   try {
-    if (destination !== '')
-      const tours = await Tour.find()
-        .skip(startIndex)
-        .limit(endIndex)
-    res.json({ tours })
+      let tours = await Tour.find()
+      res.json({ tours })
   } catch (error) {
     res.status(500).json({ error })
   }
 })
 
 // Filter tours
-
 Router.post('/filter', (req, res) => {
   const min_price = req.body.min_price || 1000
   const max_price = req.body.max_price || 10000
@@ -55,12 +45,11 @@ Router.post('/filter', (req, res) => {
   // Pagination
   const page = req.query.page || 1
   const limit = req.query.limit || 10
-
   const startIndex = (page - 1) * limit
   const endIndex = page * limit
   try {
     if (destination !== '')
-      const tours = await Tour.find({
+      let tours = await Tour.find({
         price: { $min: min_price, $max: max_price },
         category: { $all: categories },
         destination,
@@ -76,7 +65,7 @@ Router.post('/filter', (req, res) => {
 //Get single tour
 Router.get('/:id', async (req, res) => {
   try {
-    const tour = await Tour.findById(req.params.id)
+    let tour = await Tour.findById(req.params.id)
     res.json({ tour })
   } catch (error) {
     res.status(500).json({ error })
