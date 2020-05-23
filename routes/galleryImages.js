@@ -4,6 +4,11 @@ const mongoose = require('mongoose')
 const GalleryImage = require('../modules/GalleryImage')
 const fs = require('fs')
 
+const dispalayMessage = () => {
+  
+}
+
+
 // Handle file uploads
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {

@@ -3,21 +3,14 @@ const mongoose = require('mongoose')
 const app = express()
 require('dotenv').config()
 
-// mongoose
-//   .connect(process.env.MONGO_DB, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useFindAndModify: true,
-//   })
-//   .then(() => console.log('Connected to MongoDB'))
-//   .catch((error) => console.log({ message: 'Failed to connect to MongoDB', error }))
-
 mongoose
-  .connect(process.env.Mongo_DB, { useUnifiedTopology: true })
-  .then(() => console.log('Connected to MongoDB'))
-  .catch((error) => console.log('Failed to connect to MongoDB'))
-
-console.log('Connected to MongoDB')
+  .connect(process.env.Mongo_DB, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: true,
+  })
+  .then(res => console.log('Connected to MongoDB'))
+  .catch(error => console.log('Failed to connect to MongoDB'))
 
 mongoose.Promise = global.Promise
 

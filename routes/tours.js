@@ -7,7 +7,7 @@ const http = require('http')
 // Handle file uploads
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, './uploads/'),
-  filename: (req, file, cb) => cb(null, Date.now() + '_' + file.originalname)
+  filename: (req, file, cb) => cb(null, Date.now() + '_' + file.originalname),
 })
 // File Filter
 const fileFilter = (req, file, cb) => {
@@ -15,13 +15,14 @@ const fileFilter = (req, file, cb) => {
     file.mimetype === 'image/jpeg' ||
     file.mimetype === 'image/jpg' ||
     file.mimetype === 'image/png'
-  ) cb(null, true)
-   else cb(null, false)
+  )
+    cb(null, true)
+  else cb(null, false)
 }
 
 const upload = multer({ storage })
 
-// Get all tours
+//Get all tours
 Router.get('/', async (req, res) => {
   // Pagination
   const page = req.query.page || 1
@@ -29,33 +30,42 @@ Router.get('/', async (req, res) => {
   const startIndex = (page - 1) * limit
   const endIndex = page * limit
   try {
-      let tours = await Tour.find()
-      res.json({ tours })
+    let tours = await Tour.find()
+    res.json({ tours })
   } catch (error) {
     res.status(500).json({ error })
   }
 })
 
-// Filter tours
-Router.post('/filter', (req, res) => {
+//Filter tours
+Router.post('/filter', async (req, res) => {
   const min_price = req.body.min_price || 1000
   const max_price = req.body.max_price || 10000
   const destination = req.body.destination || ''
-  const categories = req.body.categories || ['sea', 'romantic', 'honeymoon', 'country', 'montain']
+  const categories = req.body.categories || [
+    'sea',
+    'romantic',
+    'honeymoon',
+    'country',
+    'montain',
+  ]
   // Pagination
   const page = req.query.page || 1
   const limit = req.query.limit || 10
   const startIndex = (page - 1) * limit
   const endIndex = page * limit
+
+  console.log(min_price)
+  console.log(categories)
+
   try {
-    if (destination !== '')
-      let tours = await Tour.find({
-        price: { $min: min_price, $max: max_price },
-        category: { $all: categories },
-        destination,
-      })
-        .skip(startIndex)
-        .limit(endIndex)
+    let tours = await Tour.find({
+      price: { $gt: min_price, $lt: max_price },
+      category: { $all: categories },
+      destination,
+    })
+      .skip(startIndex)
+      .limit(endIndex)
     res.json({ tours })
   } catch (error) {
     res.status(500).json({ error })
@@ -75,7 +85,7 @@ Router.get('/:id', async (req, res) => {
 // Store tour
 Router.post('/', upload.array('images', 10), async (req, res, next) => {
   let images = []
-  req.files.map((file) => {
+  req.files.map(file => {
     images.push(file.path)
   })
   const tour = new Tour({
@@ -90,6 +100,7 @@ Router.post('/', upload.array('images', 10), async (req, res, next) => {
     tourSubtitle: req.body.tourSubtitle,
     dateStart: req.body.dateStart,
     dateEnd: req.body.dateEnd,
+    category: req.body.category,
     numberPlaces: req.body.numberPlaces,
     placesAvailable: req.body.placesAvailable,
     program: req.body.program,
