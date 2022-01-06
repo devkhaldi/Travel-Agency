@@ -1,19 +1,19 @@
-import React, { useEffect } from 'react'
-import Navbar from '../Component/Navbar'
-import Footer from '../Component/Footer'
-import Hero from '../Component/Hero'
-import Search from './Search'
-import Offers from './Offers'
-import bg from '../img/tours/tours.jpg'
-import './css/Tours.css'
-import vector from '../img/allToursVector.svg'
+import React, { useEffect } from "react"
+import Navbar from "../Component/Navbar"
+import Footer from "../Component/Footer"
+import Hero from "../Component/Hero"
+import Search from "./Search"
+import Offers from "./Offers"
+import bg from "../img/tours/tours.jpg"
+import "./css/Tours.css"
+import vector from "../img/allToursVector.svg"
 
 const Tours = () => {
   useEffect(() => {
     window.scroll({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     })
   }, [])
   return (
@@ -26,10 +26,10 @@ const Tours = () => {
       <div
         style={{
           background: `url(${vector})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: '40%',
-          backgroundPositionX: 'right',
-          backgroundPositionY: '-1em'
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "40%",
+          backgroundPositionX: "right",
+          backgroundPositionY: "-1em",
         }}
         className='tours-content'>
         <Search />
