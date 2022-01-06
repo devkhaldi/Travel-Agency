@@ -1,21 +1,21 @@
-import React, { useEffect } from 'react'
-import Navbar from '../Component/Navbar'
-import Footer from '../Component/Footer'
-import Hero from '../Component/Hero'
-import bgImage from '../img/gallery/cover.jpeg'
-import location from '../img/Contact/location.png'
-import phone from '../img/Contact/phone.png'
-import mobile from '../img/Contact/mobile.png'
-import email from '../img/Contact/email.png'
-import link from '../img/Contact/link.png'
-import './css/Contact.css'
+import React, { useEffect } from "react"
+import Navbar from "../Component/Navbar"
+import Footer from "../Component/Footer"
+import Hero from "../Component/Hero"
+import bgImage from "../img/Contact/contactus.jpg"
+import location from "../img/Contact/location.png"
+import phone from "../img/Contact/phone.png"
+import mobile from "../img/Contact/mobile.png"
+import email from "../img/Contact/email.png"
+import link from "../img/Contact/link.png"
+import "./css/Contact.css"
 
 const Contact = () => {
   useEffect(() => {
     window.scroll({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     })
   }, [])
   return (
@@ -30,13 +30,16 @@ const Contact = () => {
           <div className='contact-column'>
             <h2>Contact Our Agency</h2>
             <p>
-              At Menara Travels we want to make sure that your trip is everything you could possibly
-              dream of. Whether you want inspiration and guidance in planning your next adventure or
-              need help with an existing booking, our travel experts are here to help. Send us an
-              email or give our team a call to book your flights, plan your adventure or get help
-              with any problems you encounter along the way. Or if you're nearby, you can visit us
-              in store to speak face to face. Our assistance doesn't end when you take off either;
-              our team are on hand to assist with any issues you may have.
+              At Menara Travels we want to make sure that your trip is
+              everything you could possibly dream of. Whether you want
+              inspiration and guidance in planning your next adventure or need
+              help with an existing booking, our travel experts are here to
+              help. Send us an email or give our team a call to book your
+              flights, plan your adventure or get help with any problems you
+              encounter along the way. Or if you're nearby, you can visit us in
+              store to speak face to face. Our assistance doesn't end when you
+              take off either; our team are on hand to assist with any issues
+              you may have.
             </p>
           </div>
           <div className='contact-column'>
@@ -46,7 +49,10 @@ const Contact = () => {
                 <div className='icon-container'>
                   <img src={location} alt='icon' />
                 </div>
-                <span>732/21 Second Street, Manchester, King Street, Kingston United Kingdom</span>
+                <span>
+                  732/21 Second Street, Manchester, King Street, Kingston United
+                  Kingdom
+                </span>
               </div>
               <div className='row'>
                 <div className='icon-container'>
