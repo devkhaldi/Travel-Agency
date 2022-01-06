@@ -12,10 +12,12 @@ const Hero = () => {
       <div className='layer'></div>
       <div className='hero-content'>
         <div className='welcome-text'>
-          <h1 className='title'>Enjoy Your Dream Vocation</h1>
+          <h1 className='title'>
+            <span>Menara Travels</span> Enjoy Your Dream Vocation
+          </h1>
           <h3 className='subtitle'>
-            Travel to the any corner of the world, without going around in
-            circles.
+            With Menara travels travel to the any corner of the world, without
+            going around in circles.
           </h3>
         </div>
         <Link to='/tours'>Explore Tours</Link>

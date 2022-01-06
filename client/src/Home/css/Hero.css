@@ -35,8 +35,8 @@ video {
   z-index: 3;
   padding: 2em;
   position: absolute;
-  width: 100%;
-  top: 50%;
+  width: 80%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -47,8 +47,11 @@ video {
   text-align: center;
   text-shadow: 0 1px black;
 }
+.welcome-text span {
+  color: rgb(9, 174, 237);
+}
 .welcome-text .title {
-  font-size: 4em;
+  font-size: 3em;
   margin-bottom: 0.5em;
 }
 .welcome-text .subtitle {
