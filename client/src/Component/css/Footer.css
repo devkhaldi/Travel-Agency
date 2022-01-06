@@ -1,14 +1,15 @@
 footer {
   padding: 4em 4em 1em 4em;
   color: #000;
-  background: var(--light-bg);
+  background: white;
 }
-footer .logo {
-  font-family: "Dancing Script", cursive;
+footer .logo img {
+  /* font-family: "Dancing Script", cursive;
   font-size: 2em;
   font-weight: bold;
   margin: 1.5em 0;
-  color: black;
+  color: black; */
+  width: 5em;
 }
 footer .footer-grid {
   display: grid;
@@ -64,9 +65,6 @@ footer button {
   cursor: pointer;
   transition: 0.5s;
   border-radius: 2rem;
-}
-footer button:hover {
-  background: #3daf95;
 }
 
 footer hr {
