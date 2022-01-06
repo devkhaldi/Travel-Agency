@@ -19,7 +19,9 @@ const BestOffers = () => {
       </div>
       <div className='best-offers'>
         {BestOffers.map(offer => (
-          <Offer key={offer.id} offer={offer} />
+          <Link to={`/tours/${offer.id}`}>
+            <Offer key={offer.id} offer={offer} />
+          </Link>
         ))}
       </div>
       <Link to='/tours' className='tours-link'>

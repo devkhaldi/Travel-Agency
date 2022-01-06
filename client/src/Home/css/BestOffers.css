@@ -8,6 +8,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2em;
 }
+.best-offers a {
+  text-decoration: none;
+  color: #000;
+}
 .best-offers-container .title {
   text-align: center;
   margin: 2.5rem 0;

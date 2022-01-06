@@ -51,6 +51,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
 }
+.tours-offers .tours a {
+  text-decoration: none;
+  color: #000;
+}
 .list-tours .tours {
   display: grid;
   grid-template-columns: 1fr;
