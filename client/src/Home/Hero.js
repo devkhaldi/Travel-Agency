@@ -1,7 +1,7 @@
-import React from 'react'
-import video from '../video/Video5.m4v'
-import '../Home/css/Hero.css'
-import { Link } from 'react-router-dom'
+import React from "react"
+import video from "../video/video5.m4v"
+import "../Home/css/Hero.css"
+import { Link } from "react-router-dom"
 
 const Hero = () => {
   return (
@@ -14,7 +14,8 @@ const Hero = () => {
         <div className='welcome-text'>
           <h1 className='title'>Enjoy Your Dream Vocation</h1>
           <h3 className='subtitle'>
-            Travel to the any corner of the world, without going around in circles.
+            Travel to the any corner of the world, without going around in
+            circles.
           </h3>
         </div>
         <Link to='/tours'>Explore Tours</Link>
