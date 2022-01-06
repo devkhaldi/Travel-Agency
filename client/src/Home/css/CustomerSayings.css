@@ -7,7 +7,7 @@
 .customerSayings .customer p {
   margin-top: 1em;
   line-height: 1.4em;
-  color: #888888;
+  color: #000;
 }
 
 .customerSayings .title {
@@ -20,7 +20,7 @@
 .customerSayings h4 {
   font-weight: 100;
   font-size: 1.1em;
-  color: #999999;
+  color: #000;
 }
 .customerSayings img {
   margin: 1em auto;
@@ -28,6 +28,6 @@
 }
 
 /* Hide stop button */
-button[data-action='stop'] {
+button[data-action="stop"] {
   display: none;
 }

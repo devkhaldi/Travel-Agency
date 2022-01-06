@@ -10,7 +10,7 @@
   padding: 0.5em 1em;
   font-size: 0.9em;
   border: none;
-  color: #888888;
+  color: #000;
   outline: none;
 }
 .list-view {
@@ -33,7 +33,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #aaaaaa;
+  color: #000;
 }
 
 .grid-view:hover,

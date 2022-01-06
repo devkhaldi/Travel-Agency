@@ -16,7 +16,7 @@
   height: 3em;
 }
 .tour-info .info::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   background: #dddddd;
@@ -24,7 +24,7 @@
   width: 1px;
 }
 .tour-info .title {
-  color: #aaaaaa;
+  color: #000;
   font-size: 0.9em;
   text-align: center;
 }
@@ -69,7 +69,7 @@
 }
 .tour-program .subtitle {
   font-size: 1em;
-  color: #888888;
+  color: #000;
   font-weight: 100;
   text-align: center;
   margin-top: 0.5em;
@@ -117,7 +117,7 @@
   font-size: 0.8em;
   text-align: center;
   letter-spacing: 0.8em;
-  color: #888888;
+  color: #000;
   font-weight: 100;
 }
 .program-item .cities {
@@ -129,7 +129,7 @@
 }
 .program-item .description {
   font-size: 0.9em;
-  color: #888888;
+  color: #000;
   line-height: 1.5em;
 }
 
@@ -180,7 +180,7 @@
 .book-tour .subtitle {
   font-size: 1em;
   margin-top: 0.5em;
-  color: #888888;
+  color: #000;
   font-weight: 100;
 }
 
