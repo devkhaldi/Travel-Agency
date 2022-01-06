@@ -1,9 +1,10 @@
 .whyMenaraTravels {
   position: relative;
   padding: 3em 2em;
-  background: url("https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background: url("https://images.pexels.com/photos/2739013/pexels-photo-2739013.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-attachment: fixed;
   background-size: cover;
+  background-position: bottom;
 }
 
 .whyMenaraTravels .title-container {
