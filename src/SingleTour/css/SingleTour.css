@@ -1,0 +1,243 @@
+/* TOUR INFO */
+.tour-info .infos-container {
+  background: var(--light-bg);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em 0;
+}
+.tour-info .info {
+  position: relative;
+  display: flex;
+  flex: 25%;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 3em;
+}
+.tour-info .info::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  background: #dddddd;
+  height: 100%;
+  width: 1px;
+}
+.tour-info .title {
+  color: #000;
+  font-size: 0.9em;
+  text-align: center;
+}
+.tour-info .value {
+  color: black;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.4em;
+}
+
+/* .tour-info .description-container {
+  padding: 3em 8em;
+}
+.tour-info .description-title {
+  position: relative;
+  font-weight: 100;
+  font-size: 1.7em;
+  text-align: center;
+}
+.tour-info .description-title::after {
+  content: '';
+  display: block;
+  width: auto;
+  height: 1px;
+  background: #f0f0f0;
+  margin: 0.5em 0;
+} */
+
+/*TOUR PROGRAM*/
+.tour-program {
+  padding: 2em 8em;
+}
+.tour-program .title-container {
+  margin: 3em 0;
+  width: 100%;
+}
+.tour-program .title {
+  font-size: 2em;
+  text-align: center;
+  font-weight: 100;
+}
+.tour-program .subtitle {
+  font-size: 1em;
+  color: #000;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.tour-program .owl-dots {
+  margin-top: 2em !important;
+}
+.tour-program .owl-dot {
+  outline: none;
+}
+.tour-program .owl-dots .active span {
+  background: var(--main-color) !important;
+}
+.tour-program .owl-dot:hover span {
+  background: var(--main-color) !important;
+}
+/*PROGRAM ITEM */
+.program-item {
+  position: relative;
+  padding: 1em 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+.program-item .header {
+  display: flex;
+}
+.program-item hr {
+  background-color: #eee;
+  border: none;
+  height: 1px;
+  width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+.program-item .time {
+  min-width: 5em;
+}
+.program-item .time .value {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.program-item .time .label {
+  font-size: 0.8em;
+  text-align: center;
+  letter-spacing: 0.8em;
+  color: #000;
+  font-weight: 100;
+}
+.program-item .cities {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 0.5em;
+  padding-left: 1em;
+}
+.program-item .description {
+  font-size: 0.9em;
+  color: #000;
+  line-height: 1.5em;
+}
+
+/* TOUR GALLERY*/
+.tour-gallery .owl-stage {
+  height: 10em;
+}
+.tour-gallery .owl-stage img {
+  min-height: 15em;
+}
+.tour-gallery .owl-carousel {
+  position: relative;
+}
+.tour-gallery .owl-carousel .owl-prev,
+.tour-gallery .owl-carousel .owl-next {
+  position: absolute;
+  top: 40%;
+  outline: none;
+  height: 2em !important;
+  width: 2em !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  font-size: 1.3em !important;
+  z-index: 2;
+  box-shadow: 0px 1px 2px #444444;
+}
+.tour-gallery .owl-carousel .owl-prev:hover,
+.tour-gallery .owl-carousel .owl-next:hover {
+  background: var(--light-blue) !important;
+  color: white;
+}
+.tour-gallery .owl-carousel .owl-prev {
+  left: 2em;
+}
+.tour-gallery .owl-carousel .owl-next {
+  right: 2em;
+}
+
+/*BOOK TOUR*/
+.book-tour {
+  padding: 4em 8em 0;
+  text-align: center;
+}
+.book-tour .title {
+  font-size: 2em;
+  font-weight: 100;
+}
+.book-tour .subtitle {
+  font-size: 1em;
+  margin-top: 0.5em;
+  color: #000;
+  font-weight: 100;
+}
+
+.checkout-btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 2em;
+}
+.checkout-btn {
+  margin-left: auto;
+}
+
+/*CHECK OUT MODAL*/
+.checkout-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.modal-content {
+  padding: 20;
+  background: white;
+  border-radius: 2px;
+  display: inline-block;
+  min-height: 300px;
+  margin: 1em;
+  position: relative;
+  min-width: 300px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  justify-self: center;
+}
+
+/*SMALL DEVICES */
+
+@media (max-width: 576px) {
+}
+
+@media (max-width: 768px) {
+  .tour-info .info {
+    flex: 50%;
+    margin-top: 1.5em;
+  }
+
+  .tour-info .description-container {
+    padding: 1em 4em;
+  }
+}
+
+@media (max-width: 992px) {
+  .tour-program {
+    padding: 2em 2em;
+  }
+}

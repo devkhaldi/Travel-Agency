@@ -1,0 +1,141 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  height: 4em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* style navbar on scroll */
+.navbar-scrolling {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.navbar-scrolling .logo-container img {
+  height: 3em;
+  margin: 0.5em 1em;
+}
+.navbar-scrolling .nav-items {
+  margin-top: 0;
+}
+.navbar-scrolling .nav-items a {
+  color: #000;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  margin: auto 2em;
+}
+.logo-container img {
+  margin: 1em;
+  height: 4em;
+  transition: all 0.3s;
+}
+
+.nav-items {
+  display: flex;
+  margin-left: auto;
+  margin-right: 2.5rem;
+  margin-top: 0.5em;
+  transition: all 0.3s;
+}
+.nav-items a {
+  padding: 1.7em 1em;
+  letter-spacing: 0.08em;
+  font-size: 0.85em;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-items a::after {
+  content: "";
+  width: 0%;
+  margin: 21px auto;
+  transition: all 0.5s;
+  display: block;
+  height: 4px;
+  background: rgb(9, 174, 237);
+}
+.nav-items a.active::after {
+  background: rgb(9, 174, 237);
+  width: 100%;
+}
+
+.nav-items a:hover::after {
+  width: 100%;
+}
+
+/* hide icon menu */
+.navbar svg {
+  display: none;
+  margin: auto 0.5em;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+/* Side navbar for mobile phones */
+.side-nav {
+  position: fixed;
+  top: 4em;
+  left: -350px;
+  height: calc(100% - 4em);
+  width: 350px;
+  background-color: #fff;
+  opacity: 0.95;
+  z-index: 11;
+  display: none;
+  transition: all 0.5s;
+}
+.side-nav-items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.side-nav-items a {
+  text-decoration: none;
+  color: black;
+  padding: 1em 2em;
+  transition: all 0.1s;
+}
+.side-nav .active {
+  background: var(--main-color);
+  color: white;
+}
+.side-nav-items a:hover {
+  color: white;
+  background: var(--main-color);
+}
+
+@media (max-width: 767px) {
+  .opened {
+    position: fixed;
+    display: block;
+    left: 0px;
+  }
+  .navbar svg {
+    display: block;
+  }
+  .navbar-scrolling svg {
+    color: black;
+  }
+  .nav-items {
+    display: none;
+  }
+  .side-nav {
+    display: block;
+  }
+  .logo-container {
+    margin: auto;
+  }
+  .logo-container img {
+    height: 3em;
+    margin: 0.5em 0;
+  }
+}

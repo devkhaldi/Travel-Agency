@@ -1,0 +1,100 @@
+/* Hero section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  height: 110vh;
+  width: 100%;
+  pointer-events: none;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 110vh;
+  width: 100%;
+  background: black;
+  opacity: 0.5;
+  z-index: 3;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  padding: 2em;
+  position: absolute;
+  width: 80%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome-text {
+  color: white;
+  margin-bottom: 1em;
+  text-align: center;
+  text-shadow: 0 1px black;
+}
+.welcome-text span {
+  color: rgb(9, 174, 237);
+}
+.welcome-text .title {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+.welcome-text .subtitle {
+  color: white;
+  font-weight: 100;
+  font-size: 1.3em;
+}
+
+.hero-content a {
+  padding: 1em 2em;
+  font-size: 1em;
+  background: var(--blue-light);
+  background: var(--blue-gradient);
+  color: white;
+  border: none;
+  outline: none;
+  margin: 1em auto;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 2rem;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .welcome-text .title {
+    font-size: 1.2em;
+  }
+  .welcome-text .subtile {
+    font-size: 0.8em;
+  }
+  .hero-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .welcome-text .title {
+    font-size: 2.2em;
+  }
+  .welcome-text .subtile {
+    font-size: 1.2em;
+  }
+  .hero-content {
+    width: 100%;
+  }
+}

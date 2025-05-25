@@ -1,0 +1,91 @@
+.single-offer {
+  display: flex;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  border-radius: 0.1em;
+  margin-bottom: 1em;
+}
+.single-offer img {
+  max-width: 40%;
+  object-fit: cover;
+}
+.single-offer .container {
+  padding: 2.5em;
+}
+.single-offer .content {
+  display: flex;
+  flex-direction: column;
+}
+.single-offer .header {
+  display: flex;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.9em;
+}
+.single-offer .price {
+  margin-left: auto;
+}
+.single-offer .country-and-price {
+  display: flex;
+  margin-bottom: 0.5em;
+}
+.single-offer .country-and-price h3 {
+  font-size: 1.4em;
+  font-weight: 100;
+}
+.single-offer .country-and-price .price {
+  margin-left: auto;
+  font-size: 1.5em;
+  color: var(--main-color);
+  letter-spacing: 0.1em;
+}
+.single-offer .cities {
+  color: #666666;
+  font-size: 1em;
+}
+
+.single-offer hr {
+  height: 1px;
+  border: none;
+  background-color: #eeeeee;
+  margin: 1em 0;
+}
+.single-offer .description {
+  display: flex;
+}
+.single-offer p {
+  font-size: 0.9em;
+  color: #000;
+  line-height: 1.5em;
+  width: 70%;
+  text-align: left;
+}
+.single-offer .link-container {
+  position: relative;
+  width: 30%;
+}
+.single-offer a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75em;
+
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 700px) {
+  .single-offer {
+    flex-direction: column;
+  }
+  .single-offer img {
+    max-width: 100%;
+  }
+  .single-offer .content {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,25 @@
+.mini-hero {
+  min-height: 60vh;
+  width: 100%;
+  color: white;
+  position: relative;
+}
+.mini-hero .text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 40em;
+  text-align: center;
+}
+.mini-hero h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  text-shadow: 0 1px black;
+}
+.mini-hero h3 {
+  font-size: 1.8em;
+  font-weight: 100;
+  text-shadow: 0 1px black;
+  margin-bottom: 1.5em;
+}

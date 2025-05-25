@@ -1,0 +1,70 @@
+.whyMenaraTravels {
+  position: relative;
+  padding: 3em 2em;
+  background: url("https://images.pexels.com/photos/2739013/pexels-photo-2739013.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.whyMenaraTravels .title-container {
+  text-align: center;
+  margin: 2em 0;
+}
+.whyMenaraTravels .title-container h1 {
+  font-size: 2.5em;
+  color: #fff;
+  text-shadow: 0px 1px #000;
+}
+.whyMenaraTravels .cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1em 1em;
+  gap: 1.5em;
+}
+.whyMenaraTravels .card {
+  background: #fff;
+  padding: 1.5em;
+  display: flex;
+  border-radius: 0.5em;
+}
+.whyMenaraTravels .icon-container {
+  padding-right: 1.5rem;
+}
+.whyMenaraTravels .icon {
+  background: var(--blue-light);
+  background: var(--blue-gradient);
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.whyMenaraTravels p {
+  color: #000;
+  font-size: 0.9em;
+}
+
+@media (max-width: 992px) {
+  .whyMenaraTravels .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .whyMenaraTravels .cards-container {
+    grid-template-columns: 1fr;
+  }
+  .whyMenaraTravels .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .whyMenaraTravels .icon-container {
+    margin-bottom: 1em;
+  }
+  .whyMenaraTravels .text-container {
+    text-align: center;
+  }
+}
